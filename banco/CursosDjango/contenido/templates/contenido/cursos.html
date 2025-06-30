@@ -1,0 +1,14 @@
+{% extends 'contenido/base.html' %}
+
+{% block title %}Cursos Disponibles - Cursos Django{% endblock %}
+
+{% block content %}
+<h1>Cursos Disponibles</h1>
+<ul>
+    {% for curso in cursos %}
+        <li>{{ curso.nombre }}</li>
+    {% empty %}
+        <li>No hay cursos disponibles.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
